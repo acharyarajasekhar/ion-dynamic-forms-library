@@ -10,9 +10,10 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "build:lib": "ng-packagr",
-    "rebuild:lib": "rd /s /q dist && ng-packagr"
+    "rebuild:lib": "rd /s /q dist && ng-packagr",
+    "publish": "npm publish dist --access public"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
