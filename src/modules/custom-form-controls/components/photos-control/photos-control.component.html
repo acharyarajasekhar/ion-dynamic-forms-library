@@ -2,7 +2,7 @@
     <ion-label>
         <ion-icon name="svnicon-gallery"> </ion-icon>
     </ion-label>
-    <ion-input type="text" [(ngModel)]="dummy" [readonly]="'true'" [placeholder]="title || 'Photos'"></ion-input>
+    <ion-input type="text" [readonly]="'true'" [placeholder]="title || 'Photos'"></ion-input>
     <button ion-button clear (click)="openImagePicker()" item-right class="smallbuttontext" [disabled]="canClear">Browse</button>
     <button ion-button clear (click)="clearImages()" color="danger" item-right class="smallbuttontext" [disabled]="!canClear">Clear</button>
 </ion-item>

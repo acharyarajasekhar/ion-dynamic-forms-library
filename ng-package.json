@@ -6,7 +6,8 @@
     "entryFile": "./src/modules/index.ts",
     "umdModuleIds": {
       "ionic-angular": "ionicAngular",
-      "ionic-cache": "ionicCache"
+      "ionic-cache": "ionicCache",
+      "lodash": "_"
     }
   }
 }
