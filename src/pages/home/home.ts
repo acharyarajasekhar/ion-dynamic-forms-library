@@ -1,0 +1,60 @@
+import { Component } from '@angular/core';
+import { ControlBase } from '../../modules/dynamic-forms/controls/control-base';
+import { FormGroup } from '@angular/forms';
+import { ControlsService } from '../../modules/dynamic-forms/services/controls.service';
+
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+
+  controls: ControlBase<any>[];
+  form: FormGroup;
+  formData: any;
+
+  constructor(private controlsSvc: ControlsService) { this.form = new FormGroup({}); }
+
+  ngOnInit() {
+    this.controls = this.controlsSvc.getControls(formControls);
+    this.form.valueChanges
+      .subscribe(val => {
+        this.formData = val;
+      });
+  }
+
+}
+
+const formControls: any = [
+  {
+    "order": 0,
+    "name": "name",
+    "type": "text",
+    "required": true,
+    "icon": "arrow-forward",
+    "title": "Name"
+  },
+  {
+    "order": 1,
+    "name": "description",
+    "type": "textarea",
+    "required": true,
+    "icon": "arrow-forward",
+    "title": "Description"
+  },
+  {
+    "type": "number",
+    "required": true,
+    "icon": "arrow-forward",
+    "title": "Contact Number",
+    "order": 3,
+    "name": "phone"
+  },
+  {
+    "order": 4,
+    "title": "Address",
+    "name": "address",
+    "required": true,
+    "type": "address"
+  }
+];

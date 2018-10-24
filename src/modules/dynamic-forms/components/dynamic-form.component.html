@@ -1,0 +1,41 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <ion-list>
+    <ng-container *ngFor="let control of controls" [ngSwitch]="control.controlType">
+      <ion-item *ngSwitchCase="'textbox'">
+        <ion-label>
+          <ion-icon [name]="control.icon"> </ion-icon>
+        </ion-label>
+        <ion-input [formControlName]="control.name" [id]="control.name" [type]="control.type" [placeholder]="control.label">
+        </ion-input>
+      </ion-item>
+      <ion-item *ngSwitchCase="'textarea'">
+        <ion-label>
+          <ion-icon [name]="control.icon"> </ion-icon>
+        </ion-label>
+        <ion-textarea [formControlName]="control.name" [id]="control.name" rows="4" [placeholder]="control.label">
+        </ion-textarea>
+      </ion-item>
+      <ion-item *ngSwitchCase="'select'">
+        <ion-label floating>{{ control.label }}</ion-label>
+        <ion-select [formControlName]="control.name" [id]="control.name">
+          <ion-option *ngFor="let option of control.options" [value]="option">{{option}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngSwitchCase="'multiselect'">
+        <ion-label>
+          <ion-icon [name]="control.icon"> </ion-icon>
+        </ion-label>
+        <ion-select [formControlName]="control.name" [id]="control.name" multiple="true" [placeholder]="control.label"
+          style="max-width: 90%;">
+          <ion-option *ngFor="let option of control.options" [value]="option">{{option}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngSwitchCase="'currency'">
+        <ion-label>
+          <ion-icon [name]="control.icon"> </ion-icon>
+        </ion-label>
+        <ion-input [type]="'number'" [formControlName]="control.name" [id]="control.name" [placeholder]="control.label"></ion-input>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+</form>
