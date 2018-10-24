@@ -1,11 +1,17 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from 'ionic-angular';
-import { AddressControlComponent } from './components/address-control.component';
+import { AddressControlComponent } from './components/address-control/address-control.component';
 import { PostalAddressApiService } from './services/postal-address-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CacheModule } from 'ionic-cache';
+import { PhotosControlComponent } from './components/photos-control/photos-control.component';
+import { IMAGE_PICKER_SERVICE, IImagePickerService, ImagePickerService } from './services/native-image-picker.service';
+
+export interface CustomFormControlsModuleConfig {
+  imagePickerService: Type<IImagePickerService>;
+}
 
 @NgModule({
   imports: [
@@ -17,20 +23,26 @@ import { CacheModule } from 'ionic-cache';
     CacheModule.forRoot({ keyPrefix: 'svn-app-cache-' }),
   ],
   declarations: [
-    AddressControlComponent
+    AddressControlComponent,
+    PhotosControlComponent
   ],
   exports: [
-    AddressControlComponent
+    AddressControlComponent,
+    PhotosControlComponent
   ],
   providers: [
-    PostalAddressApiService
+    PostalAddressApiService,
+    { provide: IMAGE_PICKER_SERVICE, useClass: ImagePickerService }
   ]
 })
 export class CustomFormControlsModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(config?: CustomFormControlsModuleConfig): ModuleWithProviders {
     return {
       ngModule: CustomFormControlsModule,
-      providers: [PostalAddressApiService]
+      providers: [
+        PostalAddressApiService,
+        { provide: IMAGE_PICKER_SERVICE, useClass: config && config.imagePickerService || ImagePickerService }
+      ]
     };
   }
 }

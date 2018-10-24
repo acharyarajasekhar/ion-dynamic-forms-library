@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Acharya Raja Sekhar",
   "homepage": "https://github.com/acharyarajasekhar/ion-dynamic-forms-library",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
@@ -12,7 +12,7 @@
     "build:lib": "ng-packagr",
     "rebuild:lib": "rd /s /q dist && ng-packagr"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
@@ -31,12 +31,13 @@
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.0",
     "ng-packagr": "^4.0.0",
     "typescript": "^2.9.2"
   },
-  "description": "An Ionic project"
+  "description": "Ionic Dynamic Forms Library - Built to support Sri Vaikhanasa Network Ionic App..."
 }

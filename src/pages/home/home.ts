@@ -47,6 +47,14 @@ const formControls: any = [
     "title": "Description"
   },
   {
+    "order": 2,
+    "title": "Cover Photos",
+    "name": "photos",
+    "required": false,
+    "type": "photos",
+    "max": 5
+  },
+  {
     "type": "number",
     "required": true,
     "icon": "arrow-forward",

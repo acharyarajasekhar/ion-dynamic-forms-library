@@ -1,7 +1,7 @@
 import { Component, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ActionSheetController } from 'ionic-angular';
-import { PostalAddressApiService } from '../services/postal-address-api.service';
+import { PostalAddressApiService } from '../../services/postal-address-api.service';
 
 @Component({
   selector: 'address-control',
@@ -40,7 +40,6 @@ export class AddressControlComponent implements ControlValueAccessor {
             text: office.officename,
             handler: () => {
               this.postal = office;
-              this.postal.country = "India";
               this.onAddressChange(null);
               return true;
             }

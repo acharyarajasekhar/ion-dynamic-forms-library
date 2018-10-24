@@ -39,6 +39,9 @@
       <ion-item *ngSwitchCase="'address'">
         <address-control [formControlName]="control.name" [id]="control.name"></address-control>
       </ion-item>
+      <ion-item *ngSwitchCase="'photos'">
+        <photos-control [formControlName]="control.name" [title]="control.label" [max]="control.max" [id]="control.name"></photos-control>
+      </ion-item>
     </ng-container>
   </ion-list>
 </form>
