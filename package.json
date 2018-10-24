@@ -1,8 +1,8 @@
 {
   "name": "@sri-vaikhanasa-network/ion-dynamic-forms-library",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Acharya Raja Sekhar",
+  "homepage": "https://github.com/acharyarajasekhar/ion-dynamic-forms-library",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
