@@ -36,6 +36,9 @@
         </ion-label>
         <ion-input [type]="'number'" [formControlName]="control.name" [id]="control.name" [placeholder]="control.label"></ion-input>
       </ion-item>
+      <ion-item *ngSwitchCase="'address'">
+        <address-control [formControlName]="control.name" [id]="control.name"></address-control>
+      </ion-item>
     </ng-container>
   </ion-list>
 </form>

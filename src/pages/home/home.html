@@ -9,3 +9,13 @@
 <ion-content padding>
   <dynamic-form [controls]="controls" [form]="form"></dynamic-form>
 </ion-content>
+
+<ion-footer *ngIf="controls">
+  <ion-toolbar>
+    <ion-buttons end>
+      <button ion-button color="primary" (tap)="submitForm($event)">
+        <ion-icon name="done-all"></ion-icon>&nbsp; Post
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

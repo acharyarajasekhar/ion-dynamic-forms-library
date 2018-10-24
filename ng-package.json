@@ -5,7 +5,8 @@
   "lib": {
     "entryFile": "./src/modules/index.ts",
     "umdModuleIds": {
-      "ionic-angular": "IonicModule"
+      "ionic-angular": "ionicAngular",
+      "ionic-cache": "ionicCache"
     }
   }
 }

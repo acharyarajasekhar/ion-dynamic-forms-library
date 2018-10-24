@@ -1,0 +1,23 @@
+<ion-list>
+    <ion-item-divider>
+        Postal Address
+    </ion-item-divider>
+    <ion-item no-lines>
+        <ion-label>
+            <ion-icon name="svnicon-roads"> </ion-icon>
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="Line1" placeholder="H.No, Street/Area"></ion-input>
+    </ion-item>
+    <ion-item no-lines>
+        <ion-label>
+            <ion-icon name="svnicon-postoffice"> </ion-icon>
+        </ion-label>
+        <ion-input type="number" [(ngModel)]="postalCode" placeholder="PIN"></ion-input>
+        <button ion-button clear (tap)="CheckPinCode(postalCode)" [disabled]="!postalCode" item-right class="smallbuttontext">Load<br />Post
+            Office(s)
+        </button>
+    </ion-item>
+    <ion-item no-lines>
+        <p>{{ this.postal?._display }}</p>
+    </ion-item>
+</ion-list>

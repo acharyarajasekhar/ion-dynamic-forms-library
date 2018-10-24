@@ -23,6 +23,10 @@ export class HomePage {
       });
   }
 
+  submitForm(event) {
+    console.log(this.formData);
+  }
+
 }
 
 const formControls: any = [

@@ -9,9 +9,10 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    "build:lib": "rd /s /q dist && ng-packagr"
+    "build:lib": "ng-packagr",
+    "rebuild:lib": "rd /s /q dist && ng-packagr"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",

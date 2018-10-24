@@ -5,6 +5,7 @@ import { ControlsService } from './services/controls.service';
 import { DynamicControlsService } from './services/dynamic-controls.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from 'ionic-angular';
+import { CustomFormControlsModule } from '../custom-form-controls/custom-form-controls.module';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { IonicModule } from 'ionic-angular';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    CustomFormControlsModule
   ],
   declarations: [
     DynamicFormComponent
