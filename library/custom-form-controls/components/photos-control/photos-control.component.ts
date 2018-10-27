@@ -9,7 +9,8 @@ import { IImagePickerService, IMAGE_PICKER_SERVICE } from '../../services/native
         provide: NG_VALUE_ACCESSOR,
         useExisting: forwardRef(() => PhotosControlComponent),
         multi: true
-    }]
+    }],
+    styleUrls: ['photos-control.component.scss']
 })
 export class PhotosControlComponent implements ControlValueAccessor {
 

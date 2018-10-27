@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { DynamicFormsModule } from '../modules/dynamic-forms/dynamic-forms.module';
+import { DynamicFormsModule } from '../../library';
 
 @NgModule({
   declarations: [

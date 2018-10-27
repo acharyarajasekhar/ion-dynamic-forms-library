@@ -3,11 +3,14 @@
   "dest": "dist",
   "workingDirectory": ".ng_build",
   "lib": {
-    "entryFile": "./src/modules/index.ts",
+    "entryFile": "./library/index.ts",
     "umdModuleIds": {
       "ionic-angular": "ionicAngular",
       "ionic-cache": "ionicCache",
       "lodash": "_"
     }
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "."
+  ]
 }

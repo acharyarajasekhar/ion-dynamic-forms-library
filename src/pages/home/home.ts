@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ControlBase } from '../../modules/dynamic-forms/controls/control-base';
+import { ControlBase } from '../../../library';
 import { FormGroup } from '@angular/forms';
-import { ControlsService } from '../../modules/dynamic-forms/services/controls.service';
+import { ControlsService } from '../../../library';
 
 @Component({
   selector: 'page-home',

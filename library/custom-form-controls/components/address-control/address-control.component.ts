@@ -10,7 +10,8 @@ import { PostalAddressApiService } from '../../services/postal-address-api.servi
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => AddressControlComponent),
     multi: true
-  }]
+  }],
+  styleUrls: ['address-control.component.scss']
 })
 export class AddressControlComponent implements ControlValueAccessor {
 
